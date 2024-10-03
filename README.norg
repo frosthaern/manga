@@ -1,0 +1,9 @@
+* important urls to make use of for this project
+  - to get similar mangas 'https://api.mangadex.org/manga?title={blob}'
+  - to get list of chapters given manga id 'https://api.mangadex.org/manga/{manga_id}/feed'
+  - to get the images for each chapter so that i can construct the website to get the image from this 'https://api.mangadex.org/at-home/server/14c12cbc-4929-48a4-97d6-b989dd615074'
+  - example url to get image 'https://cmdxd98sb0x3yprd.mangadex.network/data-saver/690d6cfa78ffb43bba15173d784246b1/1-7d3ddb6bdb1f904c97c1b9fd4bc4fe8024c208fef0e96e425e74ff226d0b69be.jpg'
+  - for the image url it's like https://baseurl/quality/hash/image.jpg/png
+
+
+
