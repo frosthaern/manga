@@ -14,6 +14,12 @@ pub struct MangaData {
 #[derive(Debug, serde::Serialize, serde::Deserialize)]
 pub struct MangaAttribute {
     pub title: Option<MangaTitle>,
+    pub description: Option<MangaDescription>,
+}
+
+#[derive(Debug, serde::Serialize, serde::Deserialize)]
+pub struct MangaDescription {
+    pub en: Option<String>,
 }
 
 
@@ -23,15 +29,24 @@ pub struct MangaTitle {
 }
 
 // 2nd one
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
 pub struct ChapterInfo {
     pub data: Vec<Chapter>,
 }
 
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
 pub struct Chapter {
     pub id: String,
+    pub attributes: ChapterAttribute,
 }
+
+#[derive(Clone, Debug, serde::Serialize, serde::Deserialize)]
+pub struct ChapterAttribute {
+    pub volume: Option<String>,
+    pub chapter: Option<String>,
+    pub title: Option<String>,
+}
+
 
 
 #[derive(Debug, serde::Serialize, serde::Deserialize)]
